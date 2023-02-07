@@ -1,0 +1,59 @@
+.cards {
+  display: grid;
+  height: 100%;
+
+  // 330 * 225
+  // grid-template-rows: repeat(auto-fill, 225px);
+  // Have no choice auto-fill is not working, os we use predefined lengthon each row and column
+  grid-template-rows: repeat(8, 225px);
+  grid-template-columns: 100%;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 10px;
+
+  .card__size-2 {
+    grid-row: span 2;
+  }
+}
+
+@media only screen and (min-width:769px) {
+  .cards {
+    display: grid;
+
+    gap: 2.7rem;
+
+    grid-template-rows: repeat(2, 225px);
+    grid-template-columns: repeat(4, 260px);
+    grid-template-areas: "zone1 zone1 zone2 zone3"
+                          "zone4 zone5 zone5 zone3";
+
+    .card__size-2 {
+      grid-row: 1;
+      grid-column: span 2;
+    }
+
+    .card:nth-of-type(1) {
+      grid-area: zone1;
+    }
+
+    .card:nth-of-type(2) {
+      grid-area: zone2;
+    }
+
+    .card:nth-of-type(3) {
+      grid-area: zone4;
+    }
+
+    .card:nth-of-type(4) {
+      grid-area: zone5;
+    }
+
+    .card:nth-of-type(5) {
+      grid-area: zone3;
+    }
+  }
+}
