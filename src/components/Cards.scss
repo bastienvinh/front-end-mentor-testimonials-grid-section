@@ -31,6 +31,10 @@
     grid-template-areas: "zone1 zone1 zone2 zone3"
                           "zone4 zone5 zone5 zone3";
 
+    height: calc(45rem + 2.7rem);
+    padding: 0;
+    margin: 0;
+
     .card__size-2 {
       grid-row: 1;
       grid-column: span 2;
