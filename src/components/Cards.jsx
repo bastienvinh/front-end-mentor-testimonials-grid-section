@@ -13,7 +13,6 @@ const Cards = () => {
     <div className="cards">
       <Card 
           hasQuoteImage={true}
-          size={2}
           image={SVGPortraitDaniel}
           color1="white"
           color2="var(--secondary-color)"
@@ -24,7 +23,6 @@ const Cards = () => {
         />
 
         <Card
-          size={1}
           image={SVGPortraitWalter}
           color1="white"
           color2="var(--secondary-color)"
@@ -35,7 +33,6 @@ const Cards = () => {
         />
 
         <Card
-          size={1}
           image={SVGPortraitJeanette}
           color1="#18202d"
           color2="#49556b"
@@ -46,7 +43,6 @@ const Cards = () => {
         />
 
         <Card
-          size={2}
           image={SVGPortraitPatrick}
           color1="white"
           color2="var(--secondary-color)"
@@ -57,7 +53,6 @@ const Cards = () => {
         />
 
         <Card
-          size={2}
           image={SVGPortraitWhittle}
           color1="#18202d"
           color2="#49556b"

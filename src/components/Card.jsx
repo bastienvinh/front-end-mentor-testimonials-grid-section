@@ -3,9 +3,9 @@ import "./Card.scss"
 
 import { ReactComponent as SVGQuote } from "../images/bg-pattern-quotation.svg"
 
-const Card = ({ image, name, message, testimonial, size, hasQuoteImage, color1, color2, bgColor }) => {
+const Card = ({ image, name, message, testimonial, hasQuoteImage, color1, color2, bgColor }) => {
   return (
-    <div className={`card card__size-${size} ${hasQuoteImage ? "card__quote" : ""}`} style={{ backgroundColor: bgColor }}>
+    <div className={`card ${hasQuoteImage ? "card__quote" : ""}`} style={{ backgroundColor: bgColor }}>
       {hasQuoteImage && <SVGQuote className="card__quote" />}
       <Avatar color={color1} image={image} name={name} />
       
