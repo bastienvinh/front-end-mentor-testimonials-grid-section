@@ -5,54 +5,43 @@
   // 330 * 225
   // grid-template-rows: repeat(auto-fill, 225px);
   // Have no choice auto-fill is not working, os we use predefined lengthon each row and column
-  grid-template-rows: repeat(8, 225px);
+  grid-template-rows: repeat(auto-fill, minmax(22.5rem, 1fr));
   grid-template-columns: 100%;
 
   justify-content: center;
   align-items: center;
-
-  gap: 15px;
-
-  padding: 10px;
-
-  & > *:nth-of-type(1), & > *:nth-of-type(4), & > *:nth-of-type(5) {
-    grid-row: span 2;
-  }
+  gap: 2.5rem;
+  padding: 1rem;
 }
 
-@media only screen and (min-width:769px) {
+@media screen and (min-width: 40rem) {
   .cards {
-    display: grid;
+    padding: 2.5rem;
 
-    gap: 2.7rem;
+    grid-template-rows: repeat(2, minmax(22.5rem, 1fr));
+    grid-template-columns: repeat(4, 1fr);
 
-    grid-template-rows: repeat(2, 225px);
-    grid-template-columns: repeat(4, 260px);
-    grid-template-areas: "zone1 zone1 zone2 zone3"
-                          "zone4 zone5 zone5 zone3";
+    grid-template-areas: "first first second third"
+                          "fourth five five third";
 
-    height: calc(45rem + 2.7rem);
-    padding: 0;
-    margin: 0;
-
-    & > *:nth-of-type(1) {
-      grid-area: zone1;
+    & > *:nth-child(1) {
+      grid-area: first;
     }
 
-    & > *:nth-of-type(2) {
-      grid-area: zone2;
+    & > *:nth-child(2) {
+      grid-area: second;
     }
 
-    & > *:nth-of-type(3) {
-      grid-area: zone4;
+    & > *:nth-child(3) {
+      grid-area: fourth;
     }
 
-    & > *:nth-of-type(4) {
-      grid-area: zone5;
+    & > *:nth-child(4) {
+      grid-area: five;
     }
 
-    & > *:nth-of-type(5) {
-      grid-area: zone3;
+    & > *:nth-child(5) {
+      grid-area: third;
     }
   }
 }

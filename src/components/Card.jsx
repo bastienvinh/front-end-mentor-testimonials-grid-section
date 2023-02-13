@@ -1,22 +1,27 @@
-import Avatar from "./Avatar"
 import "./Card.scss"
 
 import { ReactComponent as SVGQuote } from "../images/bg-pattern-quotation.svg"
 
 const Card = ({ image, name, message, testimonial, hasQuoteImage, color1, color2, bgColor }) => {
   return (
-    <div className={`card ${hasQuoteImage ? "card__quote" : ""}`} style={{ backgroundColor: bgColor }}>
-      {hasQuoteImage && <SVGQuote className="card__quote" />}
-      <Avatar color={color1} image={image} name={name} />
-      
-      <div className="testimonial-1" style={{ color: color1 }}>
+    <figure
+      className="card"
+      style={{ backgroundColor: bgColor }}
+    >
+      <img src={image} alt={name} />
+      <figcaption>
+        <span className="name" style={{ color: color1 }}>{name}</span>
+        <span className="title">Verified Graduate</span>
+      </figcaption>
+      <blockquote style={{ color: color1 }}>
         {message}
-      </div>
-
-      <div className="testimonial-2" style={{ color: color2 }}>
+      </blockquote>
+      <p style={{ color: color2 }}>
         {testimonial}
-      </div>
-    </div>
+      </p>
+
+      {hasQuoteImage && <SVGQuote className="card__quote" />}
+    </figure>
   )
 }
 

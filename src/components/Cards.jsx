@@ -10,7 +10,7 @@ import Card from "./Card"
 
 const Cards = () => {
   return (
-    <div className="cards">
+    <section className="cards">
       <Card 
           hasQuoteImage={true}
           image={SVGPortraitDaniel}
@@ -62,7 +62,7 @@ const Cards = () => {
           testimonial="Before joining the bootcamp, I've never writing a line of code. I needed some strcuture from professionals who can help me learn programming step by step. I was encouraged to enroll by a former student of theirs who can say wonderful things about the program. The entire curriculum and staf did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team project, in particular, was outstanding. It took my learning to my next level in a way that no tutorial could ever have. In fact, I've often reffered to it during interviews as an example of my development experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 100% recommend!"
         />
       
-    </div>
+    </section>
   )
 }
 
